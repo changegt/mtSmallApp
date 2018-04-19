@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<view class="container">
+    <view class='search-box'>搜索位置</view>
+    <view class='nav-box'>
+        <view class="btn-area">
+            <navigator wx:for="{{navLists1}}" wx:key="title" url="{{item.url}}" class="nav-item">
+                <image src='{{item.src}}' class='icon-img'></image><view class='title'>{{item.title}}</view>
+            </navigator>
+        </view>
+        <view class="btn-area">
+            <navigator wx:for="{{navLists2}}" wx:key="title" url="{{item.url}}" class="nav-item">
+                <image src='{{item.src}}' class='icon-img'></image><view class='title'>{{item.title}}</view>
+            </navigator>
+        </view>
+    </view>
+    <view class='nearby-shop'>
+        <view class='nearby-title'>——<text class='nearby-title-word'> 附近商家 </text>——</view>
+        <view class='nearby-lists'>
+            <view class='nearby-item' wx:for="{{nearbyLists}}" wx:key="">
+                <image class='nearby-img' src="{{item.pic_url}}"></image>
+                <view class='nearby-info'>
+                    <text class='nearby-name textwrap'>{{item.name}}</text>
+                    <view class='nearby-mid-line'>
+                        <view class='fl star-box'>
+                            <view class='star-item'></view>
+                            <view class='star-item'></view>
+                            <view class='star-item'></view>
+                            <view class='star-item'></view>
+                            <view class='star-item'></view>
+                        </view>
+                        <text class='fl fz11'>月售{{item.month_sale_num}}</text>
+                        <text class='fr fz11'>{{item.mt_delivery_time}} | {{item.distance}}</text>
+                    </view>
+                    <view class='shop-line clearfix'>
+                        <text class='shop-line-right fr' wx:if="{{item.discounts2[0].id == -3}}">美团专送</text>
+                        <text class='shop-line-left fl'>{{item.min_price_tip}} | {{item.shipping_fee_tip}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

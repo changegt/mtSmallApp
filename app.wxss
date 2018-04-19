@@ -1,0 +1,24 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+/**common**/
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix:before,.clearfix:after {content: ""; display: table;}
+.clearfix:after{clear: both;}
+.clearfix{zoom: 1; clear: both;}
+.wdwrap{word-break: break-all; word-wrap: break-word;}
+.textwrap{overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.fz11{font-size: 22rpx;}
