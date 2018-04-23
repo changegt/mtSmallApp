@@ -1,0 +1,95 @@
+/* pages/index/search/index.wxss */
+.search-wrap{
+  width: 100%;
+  background: #efefef;
+}
+.search-form{
+  width: 100%;
+  display: block;
+  background: #fff;
+}
+.search-input{
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+  margin-right: 140rpx;
+  margin-top: 14rpx;
+  padding-left: 25rpx;
+  background: #F2F2F2;
+  font-size: 28rpx;
+  border-radius: 6rpx;
+}
+.search-btn{
+  position: absolute;
+  right: 20rpx;
+  top: 14rpx;
+  width: 100rpx;
+  height: 60rpx;
+  background: #FFD161;
+  color: #333;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  padding: 0;
+}
+
+.search-lists{
+  width: 100%;
+}
+.search-item{
+  width: 100%;
+  position: relative;
+  font-size: 24rpx;
+  color: #656565;
+  margin-bottom: 20rpx;
+  background: #fff;
+}
+.search-img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 180rpx;
+  height: 140rpx;
+  border: solid 1px 1px solid #efefef;
+}
+.search-info{
+  margin-left: 210rpx;
+}
+.search-name{
+  padding: 16rpx 24rpx 16rpx 0;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #2f2f2f;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.search-line1{
+  overflow: hidden;
+  padding: 4rpx 24rpx 16rpx 0;
+  color: #656565;
+}
+.score-icon{
+  background: url(//xs01.meituan.net/waimai_i/img/sprite/homestars.02ae04d0.png) no-repeat;
+  background-size: cover;
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: -4rpx;
+  margin-top: 2rpx;
+  float: left;
+}
+.score-icon-1{
+  background-position: 0 -40px;
+}
+.score-icon-2{
+  background-position: 0 -21px;
+}
+.score-icon-3{
+  background-position: 0 -2px;
+}
+.search-line2{
+  padding: 0 24rpx 16rpx 0;
+  font-size: 24rpx;
+  color: #656565;
+  overflow: hidden;
+}

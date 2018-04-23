@@ -1,0 +1,26 @@
+<!--pages/index/search/index.wxml-->
+<view class='search-wrap'>
+  <form bindsubmit="submit" class='search-form'>
+    <input class='search-input' placeholder='请输入商家或商品名称'></input>
+    <button class='search-btn'>搜索</button>
+  </form>
+  <view class='search-lists'>
+    <view class='search-item' wx:for="{{searchLists}}" wx:key="{{id}}">
+      <image src='{{item.pic_url}}' class='search-img'></image>
+      <view class='search-info'>
+        <view class='search-name'><text>{{item.name}}</text></view>
+
+        <view class='search-line1 clearfix'>
+          <view class='score-box fl' wx:for="{{scoreArr}}"  wx:for-item="list">
+            <view class='score-icon score-icon-3' wx:if="{{item.wm_poi_score >= list}}"></view>
+            <view class='score-icon score-icon-2' wx:elif="{{item.wm_poi_score <= list-1}}"></view>
+            <view class='score-icon score-icon-1' wx:else></view>
+          </view>
+          <text class='fr'>{{item.mt_delivery_time}}|{{item.distance}}</text>
+        </view>
+
+        <view class='search-line2'><text>{{item.min_price_tip}} {{item.shipping_fee_tip}}</text></view>
+      </view>
+    </view>
+  </view>
+</view>

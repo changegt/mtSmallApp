@@ -1,6 +1,13 @@
 <!--index.wxml-->
 <view class="container">
-    <view class='search-box'>搜索位置</view>
+    <view class='search-box' bindtap="download">
+      <image class='search-bg' src='https://xs01.meituan.net/waimai_i/img/bannertemp.e8a6fa63.jpg'></image>
+      <view class='input-box clearfix'>
+        <view class='search-input fr' bindtap='toSearchPage'>鸡排</view>
+        <view class='location-box fl'  bindtap='locationReset'>浙江省-杭州市</view>
+      </view>
+    </view>
+    
     <view class='nav-box'>
         <view class="btn-area">
             <navigator wx:for="{{navLists1}}" wx:key="title" url="{{item.url}}" class="nav-item">
@@ -13,6 +20,7 @@
             </navigator>
         </view>
     </view>
+
     <view class='nearby-shop'>
         <view class='nearby-title'>——<text class='nearby-title-word'> 附近商家 </text>——</view>
         <view class='nearby-lists'>
